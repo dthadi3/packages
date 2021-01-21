@@ -33,7 +33,8 @@ override_dh_auto_configure:
 	--add-module=zmmodules/http/sso \
 	--add-module=zmmodules/http/upstreamzmauth \
 	--add-module=zmmodules/mail/zmauth \
-	--add-module=zmmodules/mail/throttle
+	--add-module=zmmodules/mail/throttle \
+	--add-module=zmmodules/ngx_brotli
 
 
 

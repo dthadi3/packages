@@ -29,6 +29,10 @@ getsrc:
 	cd $(psrctmp) && tar cfz $(zname)-$(pvers).tar.gz $(pname)-$(pvers)-zimbra
 	mv $(psrctmp)/$(zname)-$(pvers).tar.gz $(SRC_DIR)
 	rm -rf $(psrctmp)
+	cd $(zmodules) && rm -rf ngx_brotli && \
+	git clone https://github.com/google/ngx_brotli && \
+	cd ngx_brotli && \
+	git submodule update --init
 	mkdir -p $(PLATFORM_DIR)/$(zname)/$(zmodules)
 	cp -rp $(zmodules) $(PLATFORM_DIR)/$(zname)/
 

@@ -5,5 +5,4 @@ arch:
 before_script:
   - apt install m4 libpcre3-dev
 install:
-  - cd packages/thirdparty/nginx
   - make build
